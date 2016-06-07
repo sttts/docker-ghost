@@ -1,6 +1,7 @@
+version: '2'
 services:
- mysql:
-  image: mysql
+ mysql:  
+  image: mysql:5.7.12
   container_name: mysql
   ports:
    - "3306"
@@ -9,7 +10,7 @@ services:
    - MYSQL_DATABASE=ghost
    - MYSQL_USER=ghost
    - MYSQL_PASSWORD=password
- ghost:
+ ghost:  
   build: ./config
   container_name: ghost
   depends_on:
