@@ -41,9 +41,9 @@ Now you're able to delete your ghost and mysql container without losing data.
 $ docker rm -fv 032189218b2e
 $ docker rm -fv 95ede415d92e
 ```
-The ```-v``` tag will not delete the ```mysql-volume``` 
-So the mysql database will reconnect with the named volume after rerunning ```docker-compose up --build -d ``` 
-As long as your named volume  ```mysql-volume ```- exists, it's possible to reconnect your mysql.
+The ```-v``` tag will not delete the ```mysql-volume```.  
+So the mysql database will reconnect with the named volume after rerunning ```docker-compose up --build -d ```.  
+As long as your named volume  ```mysql-volume ```- exists, it's possible to reconnect your mysql. 
 Some scripts to delete dangling volumes can delete your named volume (when it isn't connected with a container). 
-But here for is also a solution which you can find here.
-A mix of these solutions will give you the possibility to persist your data.
+But here for is also a solution which you can find here. 
+A mix of these solutions will give you the possibility to persist your data. 
